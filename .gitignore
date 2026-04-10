@@ -40,5 +40,6 @@
 # debug information files
 *.dwo
 
-# vscode tasks
+# vscode
 .vscode/tasks.json
+.vscode/launch.json
