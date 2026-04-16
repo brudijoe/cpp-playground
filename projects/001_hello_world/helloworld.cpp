@@ -16,4 +16,6 @@ int main()
         ++i;
     }
     cout << endl;
+
+    return 0;
 }
