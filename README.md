@@ -37,3 +37,9 @@ This project follows a simple and consistent commit message style.
 
 - **build**: Changes that affect the build system or external dependencies
   *Example:* `build: configure webpack for production`
+
+
+### Build & Test
+cmake -S . -B build
+cmake --build build
+ctest --test-dir build
