@@ -1,15 +1,15 @@
 enable_testing()
 
 add_executable(
-  test_simplefunction
-  test_simplefunction.cc
+  test_square
+  test_square.cc
   square.cpp
 )
 
 target_link_libraries(
-  test_simplefunction
+  test_square
   GTest::gtest_main
 )
 
 include(GoogleTest)
-add_test(NAME SquareTests COMMAND test_simplefunction)
+add_test(NAME SquareTests COMMAND test_square)
