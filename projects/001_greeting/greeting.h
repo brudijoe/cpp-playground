@@ -1,6 +1,4 @@
 #pragma once
 #include <string>
 
-using namespace std;
-
-string greeting(string userName);
+std::string greeting(std::string userName);

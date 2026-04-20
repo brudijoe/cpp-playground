@@ -1,10 +1,9 @@
 #include "square.h"
 #include <iostream>
-
-using namespace std;
+#include <string>
 
 int square(int number) {
     int result = number * number;
-    cout << "The square of the number " << number << " is " << result;
+    std::cout << "The square of the number " << number << " is " << result;
     return result;
 }

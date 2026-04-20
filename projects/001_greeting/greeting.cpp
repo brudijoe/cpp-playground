@@ -1,10 +1,9 @@
 #include "greeting.h"
 #include <iostream>
+#include <string>
 
-using namespace std;
-
-string greeting(string userName) {
-    string newGreeting = "Hello " + userName;
-    cout << newGreeting;
+std::string greeting(std::string userName) {
+    std::string newGreeting = "Hello " + userName;
+    std::cout << newGreeting;
     return newGreeting;
 }
