@@ -1,6 +1,7 @@
 #include "greeting.h"
 
-int main() {
+int main()
+{
     greeting("Bob");
     return 0;
 }

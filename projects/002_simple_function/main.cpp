@@ -1,6 +1,7 @@
 #include "square.h"
 
-int main() {
+int main()
+{
     square(5);
     return 0;
 }
