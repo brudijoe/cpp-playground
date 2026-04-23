@@ -2,9 +2,9 @@
 #include <iostream>
 #include <string>
 
-std::string greeting(std::string userName)
+std::string greeting(std::string user_name)
 {
-    std::string newGreeting = "Hello " + userName;
-    std::cout << newGreeting;
-    return newGreeting;
+    std::string new_greeting = "Hello " + user_name;
+    std::cout << new_greeting;
+    return new_greeting;
 }
