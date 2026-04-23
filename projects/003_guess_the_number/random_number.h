@@ -1,0 +1,2 @@
+int randomNumber();
+#pragma once
