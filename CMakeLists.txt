@@ -20,3 +20,4 @@ FetchContent_MakeAvailable(googletest)
 
 add_subdirectory(projects/001_greeting)
 add_subdirectory(projects/002_simple_function)
+add_subdirectory(projects/003_guess_the_number)
