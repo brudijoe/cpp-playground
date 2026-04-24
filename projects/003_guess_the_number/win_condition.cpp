@@ -1,6 +1,6 @@
-#include "wincondition.h"
+#include "win_condition.h"
 
-bool wincondition(int lucky_number, int guessed_number)
+bool winCondition(int lucky_number, int guessed_number)
 {
     if (lucky_number == guessed_number)
     {

@@ -1,6 +1,6 @@
 #include <iostream>
 #include "random_number.h"
-#include "wincondition.h"
+#include "win_condition.h"
 
 int main()
 {
@@ -10,7 +10,7 @@ int main()
     int guessed_number;
     std::cout << "Guess a number from 1 to 5: ";
     std::cin >> guessed_number;
-    bool hasWon = wincondition(lucky_number, guessed_number);
+    bool hasWon = winCondition(lucky_number, guessed_number);
 
     std::cout << "Your number is: " << guessed_number << "\n";
     std::cout << "Lucky Number is: " << lucky_number << "\n";
