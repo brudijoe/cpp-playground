@@ -13,13 +13,23 @@ TEST(RandomNumberTest, IsInRange)
 
 TEST(RandomNumberTest, AllSetNumbersAreReached)
 {
-    // Sets: Are unique, meaning equal or duplicate values are ignored
-    // How to optimize this test? Increase from 100 to 1000 to 10000 -> fail test?
+    const size_t expected_size = 5;
     std::set<int> randomNumbers;
+
     for (int i = 0; i < 1000; ++i)
     {
         randomNumbers.insert(randomNumber());
+
+        // Exit early once all 5 values have been found
+        if (randomNumbers.size() == expected_size)
+        {
+            std::cout << "All 5 numbers found after " << i + 1 << " iterations";
+            SUCCEED();
+            return;
+        }
     }
+
+    // If not all values are present after 1000 attempts → fail
     for (int expected = 1; expected <= 5; ++expected)
     {
         EXPECT_TRUE(randomNumbers.count(expected))
