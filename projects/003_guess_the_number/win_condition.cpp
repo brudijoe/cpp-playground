@@ -1,10 +1,12 @@
 #include "win_condition.h"
+#include <iostream>
 
-bool winCondition(int lucky_number, int guessed_number)
+void winCondition(int lucky_number, int guessed_number)
 {
     if (lucky_number == guessed_number)
     {
-        return true;
+        std::cout << "Congratulations, you've won!" << "\n";
+        return;
     }
-    return false;
+    std::cout << "Sorry, you've lost!" << "\n";
 }
