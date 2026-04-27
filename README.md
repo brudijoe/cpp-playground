@@ -40,6 +40,6 @@ This project follows a simple and consistent commit message style.
 
 
 ### Build & Test
-cmake -S . -B build
-cmake --build build
-ctest --test-dir build
+- cmake -S . -B build
+- cmake --build build
+- ctest --test-dir build
