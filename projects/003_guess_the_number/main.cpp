@@ -51,5 +51,7 @@ int main()
     // TODO
     // Simulate a player for 1.000.000 plays
 
+    // TODO Display wrong inputs like chars etc.
+
     return 0;
 }
