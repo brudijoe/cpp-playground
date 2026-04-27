@@ -34,6 +34,7 @@ int main()
     std::cout << "Game has ended! \n";
 
     // TODO make statistics
+    // Simulate a player for 1.000.000 plays
 
     return 0;
 }
