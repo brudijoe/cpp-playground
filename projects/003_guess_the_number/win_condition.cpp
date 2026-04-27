@@ -5,8 +5,8 @@ void winCondition(int lucky_number, int guessed_number)
 {
     if (lucky_number == guessed_number)
     {
-        std::cout << "Congratulations, you've won!" << "\n";
+        std::cout << "Congratulations, you've won!" << "\n\n";
         return;
     }
-    std::cout << "Sorry, you've lost!" << "\n";
+    std::cout << "Sorry, you've lost!" << "\n\n";
 }
