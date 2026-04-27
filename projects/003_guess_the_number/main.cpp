@@ -34,6 +34,21 @@ int main()
     std::cout << "Game has ended! \n";
 
     // TODO make statistics
+    // Games won: X
+    // Games lost: X
+    // Winrate: Percentage
+
+    // TODO Later:
+    // Amount of Picked Numbers:
+    // Amount of 5: X and Percentage
+    // Amount of 4: X and Percentage
+    // ...
+    // Amount of Lucky Numbers:
+    // Amount of Lucky Number 5: X and Percentage
+    // Amount of Lucky Number 4: X and Percentage
+    // ...
+
+    // TODO
     // Simulate a player for 1.000.000 plays
 
     return 0;
