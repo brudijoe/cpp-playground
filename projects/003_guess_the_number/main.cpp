@@ -1,10 +1,16 @@
 #include <iostream>
 #include "random_number.h"
 #include "win_condition.h"
+#include "statistic.h"
 
 int main()
 {
     bool playAgain = true;
+
+    // TODO: Statistics Object
+    int gamesWon = 0;
+    int gamesLost = 0;
+    Statistic statistic(0, 0);
 
     // Run the game once
     do
@@ -18,10 +24,16 @@ int main()
         std::cout << "\n";
 
         // Result
-        std::cout << "Result \n";
+        std::cout << "Result\n";
         std::cout << "Your number is: " << guessed_number << "\n";
         std::cout << "Lucky Number is: " << lucky_number << "\n";
-        winCondition(lucky_number, guessed_number);
+        // Pass object by reference to change value
+        winCondition(lucky_number, guessed_number, statistic);
+
+        // Show Statistic
+        std::cout << "Statistic\n";
+        std::cout << "You have won the game: " << statistic.getGamesWon() << " times.\n";
+        std::cout << "You have lsot the game: " << statistic.getGamesLost() << " times.\n";
 
         // Play again
         std::cout << "Play again? (j/n): ";
@@ -31,11 +43,7 @@ int main()
         playAgain = (input == 'j');
     } while (playAgain);
 
-    std::cout << "Game has ended! \n";
-
     // TODO make statistics
-    // Games won: X
-    // Games lost: X
     // Winrate: Percentage
 
     // TODO Later:
@@ -52,6 +60,8 @@ int main()
     // Simulate a player for 1.000.000 plays
 
     // TODO Display wrong inputs like chars etc.
+
+    std::cout << "Game has ended! \n";
 
     return 0;
 }
