@@ -1,29 +1,35 @@
 #include "statistic.h"
 
 // Parameterized constructor with member initializer lists
-Statistic::Statistic(int gamesWon, int gamesLost)
-    : s_gamesWon(gamesWon), s_gamesLost(gamesLost)
+Statistic::Statistic(int games_won, int games_lost)
+    : s_games_won(games_won), s_games_lost(games_lost)
 {
 }
 
 // Setter/Getter GamesWon
-void Statistic::setGamesWon(int gamesWon)
+void Statistic::setGamesWon(int games_won)
 {
-    s_gamesWon = gamesWon;
+    s_games_won = games_won;
 }
 
 int Statistic::getGamesWon()
 {
-    return s_gamesWon;
+    return s_games_won;
 }
 
 // Setter/Getter GamesLost
-void Statistic::setGamesLost(int gamesLost)
+void Statistic::setGamesLost(int games_lost)
 {
-    s_gamesLost = gamesLost;
+    s_games_lost = games_lost;
 }
 
 int Statistic::getGamesLost()
 {
-    return s_gamesLost;
+    return s_games_lost;
+}
+
+// Calculate winrate
+void calculateWinrate()
+{
+    double winrate = s_sum_of_games / s_games_won;
 }

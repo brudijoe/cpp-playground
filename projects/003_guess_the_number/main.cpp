@@ -5,7 +5,7 @@
 
 int main()
 {
-    bool playAgain = true;
+    bool play_again = true;
 
     Statistic statistic(0, 0);
 
@@ -30,15 +30,15 @@ int main()
         // Show Statistic
         std::cout << "Statistic\n";
         std::cout << "You have won the game: " << statistic.getGamesWon() << " times.\n";
-        std::cout << "You have lsot the game: " << statistic.getGamesLost() << " times.\n";
+        std::cout << "You have lost the game: " << statistic.getGamesLost() << " times.\n";
 
         // Play again
         std::cout << "Play again? (j/n): ";
         std::cout << "\n";
         char input;
         std::cin >> input;
-        playAgain = (input == 'j');
-    } while (playAgain);
+        play_again = (input == 'j');
+    } while (play_again);
 
     // TODO make statistics
     // Winrate: Percentage
