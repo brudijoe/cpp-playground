@@ -21,25 +21,22 @@ int main()
         std::cout << "\n";
 
         // Result
-        std::cout << "Result\n";
-        std::cout << "Your number is: " << guessed_number << "\n";
-        std::cout << "Lucky Number is: " << lucky_number << "\n";
+        std::cout << "=== Result ===\n";
+        std::cout << "Your number is:  " << guessed_number << "\n";
+        std::cout << "Lucky number is: " << lucky_number << "\n";
         // Pass object by reference to change value
         winCondition(lucky_number, guessed_number, statistic);
 
         // Show Statistic
-        // TODO Print everything from the object
-        std::cout << "Statistic\n";
-        statistic.calculateWinrate();
-        std::cout << "You have won the game: " << statistic.getGamesWon() << " times.\n";
-        std::cout << "You have lost the game: " << statistic.getGamesLost() << " times.\n";
+        statistic.printStatistic();
 
         // Play again
-        std::cout << "Play again? (j/n): ";
+        std::cout << "Play again? (y/n): ";
         std::cout << "\n";
         char input;
         std::cin >> input;
-        play_again = (input == 'j');
+        play_again = (input == 'y');
+        std::cout << "\n";
     } while (play_again);
 
     // TODO Later:

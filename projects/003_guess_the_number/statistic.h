@@ -22,5 +22,7 @@ public:
     int getSumOfGames();
 
     // Calculate winrate
-    void calculateWinrate();
+    double calculateWinrate();
+
+    void printStatistic();
 };

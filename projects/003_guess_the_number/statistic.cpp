@@ -42,9 +42,17 @@ int Statistic::getSumOfGames()
 }
 
 // Calculate winrate
-void Statistic::calculateWinrate()
+double Statistic::calculateWinrate()
 {
-    // Cast to double to prevent integer division
-    double winrate = (static_cast<double>(s_games_won) / s_sum_of_games) * 100;
-    std::cout << "Your winrate is: " << std::fixed << std::setprecision(2) << winrate << " %.\n";
+    return (static_cast<double>(s_games_won) / s_sum_of_games) * 100;
+}
+
+void Statistic::printStatistic()
+{
+    std::cout << "=== Statistic ===\n";
+    std::cout << "Games played: " << s_sum_of_games << "\n";
+    std::cout << "Games won:    " << s_games_won << "\n";
+    std::cout << "Games lost:   " << s_games_lost << "\n";
+    std::cout << "Winrate:      " << std::fixed << std::setprecision(2) << calculateWinrate() << " %\n";
+    std::cout << "\n";
 }
