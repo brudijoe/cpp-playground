@@ -7,7 +7,7 @@ int main()
 {
     bool play_again = true;
 
-    Statistic statistic(0, 0);
+    Statistic statistic(0.00, 0, 0);
 
     // Run the game once
     do
@@ -28,7 +28,9 @@ int main()
         winCondition(lucky_number, guessed_number, statistic);
 
         // Show Statistic
+        // TODO Print everything from the object
         std::cout << "Statistic\n";
+        statistic.calculateWinrate();
         std::cout << "You have won the game: " << statistic.getGamesWon() << " times.\n";
         std::cout << "You have lost the game: " << statistic.getGamesLost() << " times.\n";
 
@@ -39,9 +41,6 @@ int main()
         std::cin >> input;
         play_again = (input == 'j');
     } while (play_again);
-
-    // TODO make statistics
-    // Winrate: Percentage
 
     // TODO Later:
     // Amount of Picked Numbers:

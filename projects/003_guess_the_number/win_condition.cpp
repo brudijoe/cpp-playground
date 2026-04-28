@@ -8,8 +8,10 @@ void winCondition(int lucky_number, int guessed_number, Statistic &statistic)
     {
         std::cout << "Congratulations, you've won!" << "\n\n";
         statistic.setGamesWon(statistic.getGamesWon() + 1);
+        statistic.setSumOfGames(statistic.getSumOfGames() + 1);
         return;
     }
     std::cout << "Sorry, you've lost!" << "\n\n";
     statistic.setGamesLost(statistic.getGamesLost() + 1);
+    statistic.setSumOfGames(statistic.getSumOfGames() + 1);
 }
