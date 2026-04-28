@@ -7,9 +7,6 @@ int main()
 {
     bool playAgain = true;
 
-    // TODO: Statistics Object
-    int gamesWon = 0;
-    int gamesLost = 0;
     Statistic statistic(0, 0);
 
     // Run the game once
