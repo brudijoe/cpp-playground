@@ -17,7 +17,13 @@ int main()
 
         int guessed_number;
         std::cout << "Guess a number from 1 to 5: ";
-        std::cin >> guessed_number;
+        // Validate number and range
+        while (!(std::cin >> guessed_number) || (guessed_number < 1 || guessed_number > 5))
+        {
+            std::cout << "Invalid input. Guess a number from 1 to 5: ";
+            std::cin.clear();
+            std::cin.ignore(10000, '\n');
+        }
         std::cout << "\n";
 
         // Result
@@ -40,7 +46,6 @@ int main()
     } while (play_again);
 
     // TODO Simulate a player for 1.000.000 plays
-    // TODO Display wrong inputs like chars etc.
 
     std::cout << "Game has ended! \n";
 
