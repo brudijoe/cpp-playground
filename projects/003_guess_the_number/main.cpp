@@ -39,19 +39,7 @@ int main()
         std::cout << "\n";
     } while (play_again);
 
-    // TODO Later:
-    // Amount of Picked Numbers:
-    // Amount of 5: X and Percentage
-    // Amount of 4: X and Percentage
-    // ...
-    // Amount of Lucky Numbers:
-    // Amount of Lucky Number 5: X and Percentage
-    // Amount of Lucky Number 4: X and Percentage
-    // ...
-
-    // TODO
-    // Simulate a player for 1.000.000 plays
-
+    // TODO Simulate a player for 1.000.000 plays
     // TODO Display wrong inputs like chars etc.
 
     std::cout << "Game has ended! \n";
