@@ -11,5 +11,18 @@ target_link_libraries(
   GTest::gtest_main
 )
 
+add_executable(
+  test_win_condition
+  test_win_condition.cc
+  win_condition.cpp
+  statistic.cpp
+)
+
+target_link_libraries(
+  test_win_condition
+  GTest::gtest_main
+)
+
 include(GoogleTest)
-add_test(NAME RandomNumberTests COMMAND test_random_number)
+gtest_discover_tests(test_random_number)
+gtest_discover_tests(test_win_condition)
