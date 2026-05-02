@@ -12,4 +12,4 @@ target_link_libraries(
 )
 
 include(GoogleTest)
-add_test(NAME SquareTests COMMAND test_square)
+gtest_discover_tests(test_square)

@@ -12,4 +12,4 @@ target_link_libraries(
 )
 
 include(GoogleTest)
-add_test(NAME GreetingTest COMMAND test_greeting)
+gtest_discover_tests(test_greeting)
