@@ -2,6 +2,7 @@
 #include "random_number.h"
 #include "win_condition.h"
 #include "statistic.h"
+#include "is_valid_guess.h"
 
 int main()
 {
@@ -15,10 +16,12 @@ int main()
         // Start Game
         int lucky_number = randomNumber();
 
+        // TODO Make result object
         int guessed_number;
         std::cout << "Guess a number from 1 to 5: ";
         // Validate number and range
-        while (!(std::cin >> guessed_number) || (guessed_number < 1 || guessed_number > 5))
+        // TODO Put Validation Logic into function
+        while (!(std::cin >> guessed_number) || !isValidGuess(guessed_number))
         {
             std::cout << "Invalid input. Guess a number from 1 to 5: ";
             std::cin.clear();
