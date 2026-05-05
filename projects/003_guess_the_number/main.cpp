@@ -31,7 +31,7 @@ int main()
         winCondition(lucky_number, guessed_number, statistic);
 
         // Show Statistic
-        statistic.printStatistic();
+        std::cout << statistic;
 
         // Play again
         std::cout << "Play again? (y/n): ";

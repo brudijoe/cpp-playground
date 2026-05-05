@@ -1,4 +1,5 @@
 #pragma once
+#include <ostream>
 
 class Statistic
 {
@@ -22,7 +23,7 @@ public:
     int getSumOfGames() const;
 
     // Calculate winrate
-    double calculateWinrate();
+    double calculateWinrate() const;
 
-    void printStatistic();
+    friend std::ostream &operator<<(std::ostream &out, const Statistic &statistic);
 };

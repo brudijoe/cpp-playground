@@ -42,17 +42,18 @@ int Statistic::getSumOfGames() const
 }
 
 // Calculate winrate
-double Statistic::calculateWinrate()
+double Statistic::calculateWinrate() const
 {
     return (static_cast<double>(s_games_won) / s_sum_of_games) * 100;
 }
 
-void Statistic::printStatistic()
+std::ostream &operator<<(std::ostream &out, const Statistic &statistic)
 {
-    std::cout << "=== Statistic ===\n";
-    std::cout << "Games played: " << s_sum_of_games << "\n";
-    std::cout << "Games won:    " << s_games_won << "\n";
-    std::cout << "Games lost:   " << s_games_lost << "\n";
-    std::cout << "Winrate:      " << std::fixed << std::setprecision(2) << calculateWinrate() << " %\n";
-    std::cout << "\n";
+    out << "=== Statistic ===\n";
+    out << "Games played: " << statistic.s_sum_of_games << "\n";
+    out << "Games won:    " << statistic.s_games_won << "\n";
+    out << "Games lost:   " << statistic.s_games_lost << "\n";
+    out << "Winrate:      " << std::fixed << std::setprecision(2) << const_cast<Statistic &>(statistic).calculateWinrate() << " %\n";
+    out << "\n";
+    return out;
 }
