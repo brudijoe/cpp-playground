@@ -15,7 +15,7 @@ void Statistic::setGamesWon(int games_won)
     s_games_won = games_won;
 }
 
-int Statistic::getGamesWon()
+int Statistic::getGamesWon() const
 {
     return s_games_won;
 }
@@ -26,7 +26,7 @@ void Statistic::setGamesLost(int games_lost)
     s_games_lost = games_lost;
 }
 
-int Statistic::getGamesLost()
+int Statistic::getGamesLost() const
 {
     return s_games_lost;
 }
@@ -36,7 +36,7 @@ void Statistic::setSumOfGames(int sum_of_games)
     s_sum_of_games = sum_of_games;
 }
 
-int Statistic::getSumOfGames()
+int Statistic::getSumOfGames() const
 {
     return s_sum_of_games;
 }

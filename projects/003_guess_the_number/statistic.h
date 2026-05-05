@@ -13,13 +13,13 @@ public:
 
     // Setter/Getter
     void setGamesWon(int games_won);
-    int getGamesWon();
+    int getGamesWon() const;
 
     void setGamesLost(int games_lost);
-    int getGamesLost();
+    int getGamesLost() const;
 
     void setSumOfGames(int sum_of_games);
-    int getSumOfGames();
+    int getSumOfGames() const;
 
     // Calculate winrate
     double calculateWinrate();
